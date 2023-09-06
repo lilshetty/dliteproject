@@ -127,9 +127,9 @@ stickFigure (int index)
       printf
 	("\n    +---+\n    |   |\n    O   |\n   /|\\  |\n   / \\  |\n        |\n  =========\n");
       printf ("\nTHE WORD WAS : %s\n", wordlist[index].word);
-      printf ("\n********************************************\n");
-      printf ("******************GAME OVER*****************\n");
-      printf ("********************************************\n");
+      printf ("\n**************************************************************************\n");
+      printf ("********************************GAME OVER*********************************\n");
+      printf ("**************************************************************************\n");
       done = 0;
       break;
     default:			//some how "strikes" value does not lie between 0 and 6 then execute this case.
@@ -164,9 +164,9 @@ displayWord (int index)
   printf ("\n");
   if (flag)			//checks if victory condition is fulfilled.
     {
-      printf ("\n\n********************************************\n");
-      printf ("******************YOU WON!!*****************\n");
-      printf ("********************************************\n");
+      printf ("\n\n**************************************************************************\n");
+      printf ("*******************************YOU WON!!**********************************\n");
+      printf ("**************************************************************************\n");
       done = 0;			//denotes end of game and player has won.
 
     }
@@ -177,17 +177,45 @@ main ()
 {
   int index, len, choice;
   char userkey;
-  printf ("********************************************\n");
-  printf ("****************HANGMAN GAME****************\n");
-  printf ("********************************************\n");
+  printf ("**************************************************************************\n");
+  printf ("*****************************HANGMAN-GAME*********************************\n");
+  printf ("**************************************************************************\n");
+  printf ("**                      _________________________                       **\n");
+  printf ("**                      |           |          |                        **\n");
+  printf ("**                      |           |                                   **\n");                  
+  printf ("**                      |          _|_                                  **\n");
+  printf ("**                      |       .-""""""-.                              **\n");   
+  printf ("**                      |     .'          '.                            **\n");
+  printf ("**                      |    [   O      O   ]                           **\n");
+  printf ("**                      |   :                :                          **\n");
+  printf ("**                      |   |                |                          **\n");
+  printf ("**                      |   : ',          ,' :                          **\n");
+  printf ("**                      |    {  '-......-'  }                           **\n");
+  printf ("**                      |     '.          .'                            **\n");
+  printf ("**                      |       '-......-'                              **\n");
+  printf ("**                      |                                               **\n");
+  printf ("**                    __|________________________|                      **\n");
+  printf ("**                    ---------------------------                       **\n");
+  printf ("**                                                                      **\n");
   while (1)
     {
-      printf ("\n\t****MENU****\n");
-      printf ("PRESS 1 to ADD custom words.\n");
-      printf ("PRESS 2 to PLAY.\n");
-      printf ("PRESS 3 to play ONLY with custom words.\n");
-      printf ("PRESS ANYKEY to EXIT.\n");
-      scanf ("%d", &choice);
+      printf ("**                             *****MENU*****                           **\n");
+      printf ("**                __________________________________________            **\n");
+      printf ("**                |                                         |           **\n");
+      printf ("**                | PRESS 1 to ADD custom words.            |           **\n");
+      printf ("**                | PRESS 2 to PLAY.                        |           **\n");
+      printf ("**                | PRESS 3 to play ONLY with custom words. |           **\n");
+      printf ("**                | PRESS ANYKEY to EXIT.                   |           **\n");
+      printf ("**                |_________________________________________|           **\n");
+      printf ("**                                                                      **\n");
+      printf ("**                                                                      **\n");
+      printf ("**                ENTER YOUR CHOICE : ");
+      scanf ("%d", &choice);printf ("       **");
+      printf ("**                                                                      **\n");
+      printf ("**                                                                      **\n");
+      printf ("**************************************************************************\n");
+      printf ("**************************************************************************\n");
+      
       index = getRandomWord (choice);
       len = strlen (wordlist[index].word);	//store length of random word.
       printf ("\nSTART:\n");
